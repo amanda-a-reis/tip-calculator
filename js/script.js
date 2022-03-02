@@ -189,7 +189,7 @@ function seleciona(arg) {
     porcentagem = 0.05;
   }
 
-  if (counter % 2 != 0 && arg == 2 && ligado2) {
+  if (arg == 2 && ligado2) {
     //Primeiro clique
     botao2.style.background = "hsl(172, 67%, 45%)";
     botao2.style.color = "hsl(183, 100%, 15%)";
@@ -205,7 +205,7 @@ function seleciona(arg) {
 
     porcentagem = 0.1;
   }
-  if (counter % 2 != 0 && arg == 3 && ligado3) {
+  if (arg == 3 && ligado3) {
     //Primeiro clique
     botao3.style.background = "hsl(172, 67%, 45%)";
     botao3.style.color = "hsl(183, 100%, 15%)";
@@ -221,7 +221,7 @@ function seleciona(arg) {
 
     porcentagem = 0.15;
   }
-  if (counter % 2 != 0 && arg == 4 && ligado4) {
+  if (arg == 4 && ligado4) {
     //Primeiro clique
     botao4.style.background = "hsl(172, 67%, 45%)";
     botao4.style.color = "hsl(183, 100%, 15%)";
@@ -237,7 +237,7 @@ function seleciona(arg) {
 
     porcentagem = 0.25;
   }
-  if (counter % 2 != 0 && arg == 5 && ligado5) {
+  if (arg == 5 && ligado5) {
     //Primeiro clique
     botao5.style.background = "hsl(172, 67%, 45%)";
     botao5.style.color = "hsl(183, 100%, 15%)";
