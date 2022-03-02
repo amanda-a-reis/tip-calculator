@@ -278,7 +278,6 @@ function reset() {
   cif = 0;
   porcentagem = 0;
   numPeople = 1;
-  counter = 1;
   botao1.style.background = "hsl(183, 100%, 15%)";
   botao1.style.color = "white";
   botao2.style.background = "hsl(183, 100%, 15%)";
@@ -289,4 +288,6 @@ function reset() {
   botao4.style.color = "white";
   botao5.style.background = "hsl(183, 100%, 15%)";
   botao5.style.color = "white";
+  counter = 0;
+  return counter += 1;
 }
