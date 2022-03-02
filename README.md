@@ -25,6 +25,6 @@ O usuário também pode entrar com um valor customizado de gorjeta digitando a q
 
 ![03](https://user-images.githubusercontent.com/92919925/156384060-8e440d2b-3dae-408b-9b90-61c0e00eb3ca.png)
 
-Caso o usuário deseje recomeçar os cálculos, ele pode apertar o botão "Reset", que fará com que todos os campos sejam zerados (com exceção do botão, que precisa ser desativado manualmente).
+Caso o usuário deseje recomeçar os cálculos, ele pode apertar o botão "Reset", que fará com que todos os campos sejam zerados.
 
 Se o usuário tentar entrar com um valor que seja diferente de números ou o ponto "." para operações decimais, terá sua ação limitada pelo programa, que não permite tais caracteres.
