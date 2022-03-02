@@ -365,13 +365,13 @@ input {
 #reset {
     position: relative;
     border: none;
-    height: 30px;
+    height: 40px;
     width: 250px;
     border-radius: 5px;
     font-weight: 700;
     color: hsl(183, 100%, 15%);
     background-color: hsl(172, 67%, 45%);
-    top: 60px;
+    top: 10px;
     right: 25px;
 
 }

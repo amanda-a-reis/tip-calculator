@@ -278,4 +278,15 @@ function reset() {
   cif = 0;
   porcentagem = 0;
   numPeople = 1;
+  counter = 1;
+  botao1.style.background = "hsl(183, 100%, 15%)";
+  botao1.style.color = "white";
+  botao2.style.background = "hsl(183, 100%, 15%)";
+  botao2.style.color = "white";
+  botao3.style.background = "hsl(183, 100%, 15%)";
+  botao3.style.color = "white";
+  botao4.style.background = "hsl(183, 100%, 15%)";
+  botao4.style.color = "white";
+  botao5.style.background = "hsl(183, 100%, 15%)";
+  botao5.style.color = "white";
 }
