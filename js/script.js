@@ -68,137 +68,16 @@ function getCust() {
   cust = document.getElementById("custom1").value;
   cust = parseInt(cust);
   porcentagem = cust / 100;
-}
-
-function seleciona(arg) {
-  if (counter % 2 != 0 && arg == 1 && ligado1) {
-    //Primeiro clique
-    botao1.style.background = "hsl(172, 67%, 45%)";
-    botao1.style.color = "hsl(183, 100%, 15%)";
-
-    ligado1 = true;
-    ligado2 = false;
-    ligado3 = false;
-    ligado4 = false;
-    ligado5 = false;
-
-    porcentagem = 0.05;
-    return (counter += 1);
-  } else if (counter % 2 == 0 && arg == 1 && ligado1) {
-    //Segundo clique
-    botao1.style.background = "hsl(183, 100%, 15%)";
-    botao1.style.color = "white";
-
-    ligado1 = true;
-    ligado2 = true;
-    ligado3 = true;
-    ligado4 = true;
-    ligado5 = true;
-    return (counter += 1);
-  }
-
-  if (counter % 2 != 0 && arg == 2 && ligado2) {
-    //Primeiro clique
-    botao2.style.background = "hsl(172, 67%, 45%)";
-    botao2.style.color = "hsl(183, 100%, 15%)";
-
-    ligado1 = false;
-    ligado2 = true;
-    ligado3 = false;
-    ligado4 = false;
-    ligado5 = false;
-    porcentagem = 0.1;
-    return (counter += 1);
-  } else if (counter % 2 == 0 && arg == 2 && ligado2) {
-    //Segundo clique
-    botao2.style.background = "hsl(183, 100%, 15%)";
-    botao2.style.color = "white";
-
-    ligado1 = true;
-    ligado2 = true;
-    ligado3 = true;
-    ligado4 = true;
-    ligado5 = true;
-    return (counter += 1);
-  }
-
-  if (counter % 2 != 0 && arg == 3 && ligado3) {
-    //Primeiro clique
-    botao3.style.background = "hsl(172, 67%, 45%)";
-    botao3.style.color = "hsl(183, 100%, 15%)";
-
-    ligado1 = false;
-    ligado2 = false;
-    ligado3 = true;
-    ligado4 = false;
-    ligado5 = false;
-    porcentagem = 0.15;
-    return (counter += 1);
-  } else if (counter % 2 == 0 && arg == 3 && ligado3) {
-    //Segundo clique
-    botao3.style.background = "hsl(183, 100%, 15%)";
-    botao3.style.color = "white";
-
-    ligado1 = true;
-    ligado2 = true;
-    ligado3 = true;
-    ligado4 = true;
-    ligado5 = true;
-
-    return (counter += 1);
-  }
-
-  if (counter % 2 != 0 && arg == 4 && ligado4) {
-    //Primeiro clique
-    botao4.style.background = "hsl(172, 67%, 45%)";
-    botao4.style.color = "hsl(183, 100%, 15%)";
-
-    ligado1 = false;
-    ligado2 = false;
-    ligado3 = false;
-    ligado4 = true;
-    ligado5 = false;
-
-    porcentagem = 0.25;
-    return (counter += 1);
-  } else if (counter % 2 == 0 && arg == 4 && ligado4) {
-    //Segundo clique
-    botao4.style.background = "hsl(183, 100%, 15%)";
-    botao4.style.color = "white";
-
-    ligado1 = true;
-    ligado2 = true;
-    ligado3 = true;
-    ligado4 = true;
-    ligado5 = true;
-
-    return (counter += 1);
-  }
-
-  if (counter % 2 != 0 && arg == 5 && ligado5) {
-    //Primeiro clique
-    botao5.style.background = "hsl(172, 67%, 45%)";
-    botao5.style.color = "hsl(183, 100%, 15%)";
-
-    ligado1 = false;
-    ligado2 = false;
-    ligado3 = false;
-    ligado4 = false;
-    ligado5 = true;
-    porcentagem = 0.5;
-    return (counter += 1);
-  } else if (counter % 2 == 0 && arg == 5 && ligado5) {
-    //Segundo clique
-    botao5.style.background = "hsl(183, 100%, 15%)";
-    botao5.style.color = "white";
-
-    ligado1 = true;
-    ligado2 = true;
-    ligado3 = true;
-    ligado4 = true;
-    ligado5 = true;
-    return (counter += 1);
-  }
+  botao1.style.background = "hsl(183, 100%, 15%)";
+  botao1.style.color = "white";
+  botao3.style.background = "hsl(183, 100%, 15%)";
+  botao3.style.color = "white";
+  botao4.style.background = "hsl(183, 100%, 15%)";
+  botao4.style.color = "white";
+  botao5.style.background = "hsl(183, 100%, 15%)";
+  botao5.style.color = "white";
+  botao2.style.background = "hsl(183, 100%, 15%)";
+  botao2.style.color = "white";
 }
 
 let numPeople = document.getElementById("numPeople").value;
@@ -236,7 +115,7 @@ function evento() {
   totalPorPessoa = ((cif + cif * porcentagem) / numPeople).toFixed(2);
   totalGorjetaPessoa = ((cif * porcentagem) / numPeople).toFixed(2);
 
-  if (isNaN(totalGorjetaPessoa) || isNaN(totalPorPessoa)) {
+  if (isNaN(totalGorjetaPessoa) || isNaN(totalPorPessoa) || !isFinite(totalPorPessoa)) {
     totalGorjetaPessoa = 0;
     totalPorPessoa = 0;
   } else if (totalGorjetaPessoa >= 100 || totalPorPessoa >= 100) {
@@ -289,5 +168,89 @@ function reset() {
   botao5.style.background = "hsl(183, 100%, 15%)";
   botao5.style.color = "white";
   counter = 0;
-  return counter += 1;
+  return (counter += 1);
+}
+
+function seleciona(arg) {
+  if (arg == 1) {
+    //Primeiro clique
+    botao1.style.background = "hsl(172, 67%, 45%)";
+    botao1.style.color = "hsl(183, 100%, 15%)";
+
+    botao2.style.background = "hsl(183, 100%, 15%)";
+    botao2.style.color = "white";
+    botao3.style.background = "hsl(183, 100%, 15%)";
+    botao3.style.color = "white";
+    botao4.style.background = "hsl(183, 100%, 15%)";
+    botao4.style.color = "white";
+    botao5.style.background = "hsl(183, 100%, 15%)";
+    botao5.style.color = "white";
+
+    porcentagem = 0.05;
+  }
+
+  if (counter % 2 != 0 && arg == 2 && ligado2) {
+    //Primeiro clique
+    botao2.style.background = "hsl(172, 67%, 45%)";
+    botao2.style.color = "hsl(183, 100%, 15%)";
+
+    botao1.style.background = "hsl(183, 100%, 15%)";
+    botao1.style.color = "white";
+    botao3.style.background = "hsl(183, 100%, 15%)";
+    botao3.style.color = "white";
+    botao4.style.background = "hsl(183, 100%, 15%)";
+    botao4.style.color = "white";
+    botao5.style.background = "hsl(183, 100%, 15%)";
+    botao5.style.color = "white";
+
+    porcentagem = 0.1;
+  }
+  if (counter % 2 != 0 && arg == 3 && ligado3) {
+    //Primeiro clique
+    botao3.style.background = "hsl(172, 67%, 45%)";
+    botao3.style.color = "hsl(183, 100%, 15%)";
+
+    botao1.style.background = "hsl(183, 100%, 15%)";
+    botao1.style.color = "white";
+    botao2.style.background = "hsl(183, 100%, 15%)";
+    botao2.style.color = "white";
+    botao4.style.background = "hsl(183, 100%, 15%)";
+    botao4.style.color = "white";
+    botao5.style.background = "hsl(183, 100%, 15%)";
+    botao5.style.color = "white";
+
+    porcentagem = 0.15;
+  }
+  if (counter % 2 != 0 && arg == 4 && ligado4) {
+    //Primeiro clique
+    botao4.style.background = "hsl(172, 67%, 45%)";
+    botao4.style.color = "hsl(183, 100%, 15%)";
+
+    botao1.style.background = "hsl(183, 100%, 15%)";
+    botao1.style.color = "white";
+    botao3.style.background = "hsl(183, 100%, 15%)";
+    botao3.style.color = "white";
+    botao2.style.background = "hsl(183, 100%, 15%)";
+    botao2.style.color = "white";
+    botao5.style.background = "hsl(183, 100%, 15%)";
+    botao5.style.color = "white";
+
+    porcentagem = 0.25;
+  }
+  if (counter % 2 != 0 && arg == 5 && ligado5) {
+    //Primeiro clique
+    botao5.style.background = "hsl(172, 67%, 45%)";
+    botao5.style.color = "hsl(183, 100%, 15%)";
+
+    botao1.style.background = "hsl(183, 100%, 15%)";
+    botao1.style.color = "white";
+    botao3.style.background = "hsl(183, 100%, 15%)";
+    botao3.style.color = "white";
+    botao4.style.background = "hsl(183, 100%, 15%)";
+    botao4.style.color = "white";
+    botao2.style.background = "hsl(183, 100%, 15%)";
+    botao2.style.color = "white";
+
+    porcentagem = 0.5;
+  }
 }
