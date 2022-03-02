@@ -1,4 +1,4 @@
-O projeto pode ser visualizado no site: https://bityli.com/fbqVZ
+O projeto pode ser visualizado no site: https://www.frontendmentor.io/solutions/tip-calculator-with-js-css-e-html-PYWC4962b
 Além disso, ele está disponível em: https://amanda-a-reis.github.io/tip-calculator/
 
 A ideia era criar uma calculadora de gorjetas, que recebe o valor total da conta, uma porcentagem para a gorjeta e o número de amigos envolvidos.
