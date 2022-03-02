@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <main>
+      <img id="logo" src="./images/logo.svg" alt="Logo" />
+      <div class="flexBox1">
+        <div class="fleBoxItem1">
+          <div class="names1">Bill</div>
+          <div>
+            <img
+              id="cifrao-icon"
+              src="./images/icon-dollar.svg"
+              alt="dollar icon"
+            /><input type="text" id="cifrao" class="text" placeholder="0" autocomplete="off" oninput="getCif()"/>
+          </div>
+
+          <div class="names">Select Tip %</div>
+          <div class="flexBox2">
+            <button onclick="seleciona(1)" class="buttom1" id="botao1">
+              5%
+            </button>
+            <button onclick="seleciona(2)" class="buttom" id="botao2">
+              10%
+            </button>
+            <button onclick="seleciona(3)" class="buttom" id="botao3">
+              15%
+            </button>
+            <button onclick="seleciona(4)" class="buttom1" id="botao4">
+              25%
+            </button>
+            <button onclick="seleciona(5)" class="buttom" id="botao5">
+              50%
+            </button>
+            <div><input type="text" id="custom1" class="custom"  placeholder="Custom" oninput="getCust()"/></div>
+          </div>
+          <div class="names">Number of People</div>
+          <div id="zero">Can't be zero</div>
+          <div>
+            <img
+              id="person-icon"
+              src="./images/icon-person.svg"
+              alt="person icon"
+            /><input type="text" id="numPeople" class="text" placeholder="0" oninput="clicar()" autocomplete="off"/>
+          </div>
+        </div>
+
+        <div class="flex">
+          <div>
+            <div class="amount">Tip Amount</div>
+            <div class="person">/ person</div>
+            <div class="total" id="total1">R$0.00</div>
+          </div>
+
+          <div>
+            <div class="amount">Total</div>
+            <div class="person">/ person</div>
+            <div class="total" id="total2">R$0.00</div>
+          </div>
+          <div><button id="reset" onclick="reset()">Reset</button></div>
+        </div>
+      </div>
+    </main>
+      <footer>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> 
+    Coded by <a href="https://github.com/amanda-a-reis" target="_blank">Amanda Alves Reis</a>
+    </footer>
+  
+      <script src="./js/script.js"></script>
+  </body>
+</html>
